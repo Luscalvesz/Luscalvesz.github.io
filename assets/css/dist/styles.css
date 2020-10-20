@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Bungee Hairline", cursive;
+  font-family: "Iceland", cursive;
+}
+
+.body {
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  background: #000000ad;
+  position: fixed;
+  width: 100%;
+}
+.header-nav {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.header-nav-item {
+  color: white;
+  list-style-type: none;
+  font-size: 2rem;
+  font-family: "Aldrich", sans-serif;
+}
+
+.main {
+  height: 99vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-video {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+.main-title {
+  color: white;
+  letter-spacing: 10px;
+  margin-bottom: 50px;
+}
+
+.imagem-bait {
+  position: fixed;
+  right: 1rem;
+  bottom: -46%;
+  transition: bottom 0.5s;
+}
+
+#bImg {
+  position: fixed;
+  right: 0;
+  bottom: -30%;
+  transition: bottom 1.5s;
+}
+
+.is--active {
+  bottom: 0 !important;
+  z-index: 2;
+}
+
+#imagem {
+  transition: transform 1s;
+  width: 100px;
+}
+
+#imagem:hover {
+  transform: rotate(360deg);
+}

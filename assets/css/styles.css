@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Bungee Hairline', cursive;
+  font-family: 'Iceland', cursive;
+}
+
+.body {
+  height: 100vh;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 10vh;
+  background: #000000ad;
+  position: fixed;
+  width: 100%;
+}
+
+.header-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
+}
+
+.header-nav-item {
+  color: white;
+  list-style-type: none;
+  font-size: 2rem;
+  font-family: 'Aldrich', sans-serif;
+}
+
+.main {
+  height: 99vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-video {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.main-title {
+  color: white;
+  letter-spacing: 10px;
+  margin-bottom: 50px;
+}
+
+.imagem-bait {
+  position: fixed;
+  right: 1rem;
+  bottom: -46%;
+  -webkit-transition: bottom 0.5s;
+  transition: bottom 0.5s;
+}
+
+#bImg {
+  position: fixed;
+  right: 0;
+  bottom: -30%;
+  -webkit-transition: bottom 1.5s;
+  transition: bottom 1.5s;
+}
+
+.is--active {
+  bottom: 0 !important;
+  z-index: 2;
+}
+
+#imagem {
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  width: 100px;
+}
+
+#imagem:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+/*# sourceMappingURL=styles.css.map */
