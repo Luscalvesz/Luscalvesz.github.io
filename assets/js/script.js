@@ -1,6 +1,6 @@
 function travazap() {
     const audio = new Audio('./assets/music/windows-10-error-sound.mp3');
-    const audio2 = new Audio('./assets/music/avast.mp3');
+    const audio2 = new Audio('./assets/music/avast2.mp3');
 
     let box2 = document.getElementById("b")
     let box = document.getElementById("a")
@@ -9,21 +9,23 @@ function travazap() {
 
     let i = 0;
     let rdn = 0
+    let rdn2 = 0
     while (i < 100) {
         songs()
-        rdn = Math.floor(Math.random() * 25);
-        out(i, rdn);
+        rdn = Math.floor(Math.random() * 20);
+        rdn2 = Math.floor(Math.random() * 20);
+        out(i, rdn, rdn2);
         i++;
     }
-    function out(i, rdn) {
+    function out(i, rdn, rdn2) {
         setTimeout(function () {
-            e2 = `<img style="position:fixed; right: ${i += rdn}rem; top: ${i += rdn}rem" src='./assets/img/error2.png'>`
+            e2 = `<img style="z-index:${rdn2}; position:fixed; right: ${i -= rdn}rem; top: ${i -= rdn}rem" src='./assets/img/error2.png'>`
             box2.innerHTML += e2
 
-            e1 = `<img style="z-index:1; position:fixed; left: ${i += rdn}rem; top: ${i += rdn}rem;" src='./assets/img/error.png'>`
+            e1 = `<img style="z-index:${rdn2}; position:fixed; left: ${i += rdn}rem; top: ${i += rdn}rem;" src='./assets/img/error.png'>`
             box.innerHTML += e1
             
-            setTimeout(() => { audio.play(); }, 1000);
+            // setTimeout(() => { audio.play(); }, 1000);
             setTimeout(() => { audio2.play(); }, 5000);
             console.log(`<img style="position:fixed; left: ${i}rem; top: ${i}rem" src='./assets/img/error.png'>`)
             

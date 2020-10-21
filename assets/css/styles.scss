@@ -1,21 +1,19 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Bungee Hairline', cursive;
+    // font-family: 'Bungee Hairline', cursive;
     font-family: 'Iceland', cursive;
 }
 
 .body {
     height: 100vh;
-    // background-image: url('../img/batata.gif');
-    // background-size: cover;
-    // background: black;
 }
 
+// ---------- inicio Header ----------
 .header {
     display: flex;
     align-items: center;
-    height: 10vh;
+    height: 12vh;
     background: #000000ad;
     position: fixed;
     width: 100%;
@@ -24,16 +22,22 @@
         display: flex;
         justify-content: space-evenly;
         width: 100%;
+        align-items: center;
 
         &-item {
             color: white;
             list-style-type: none;
             font-size: 2rem;
-            font-family: 'Aldrich', sans-serif;
+
+            // font-family: 'Aldrich', sans-serif;
+            &-img {
+                width: 70px;
+            }
         }
     }
 }
 
+// ---------- Inicio Main ----------
 .main {
     height: 99vh;
     display: flex;
@@ -51,9 +55,29 @@
 
     &-title {
         color: white;
-        letter-spacing: 10px;
+        letter-spacing: 25px;
         margin-bottom: 50px;
+        position: relative;
+        width: 880px;
+        font-size: 55px;
+        bottom: 50px;
+
+        &::after {
+            content: 'Hacking The world!';
+            position: absolute;
+            left: 2px;
+            background: black;
+            animation: glitch 2.5s infinite linear alternate-reverse;
+        }
+
+        &::before {
+            content: 'Hacking The world!';
+            position: absolute;
+            left: -3px;
+            background: black;
+        }
     }
+
 }
 
 .imagem-bait {
@@ -84,4 +108,101 @@
 
 #imagem:hover {
     transform: rotate(360deg);
+}
+
+
+
+
+
+
+
+
+// .glitch {
+//     color: white;
+//     font-size: 50px;
+//     letter-spacing: 10px;
+//     position: relative;
+//     width: 700px;
+//     margin: 0 auto;
+// }
+
+
+
+
+
+
+.videoTeste{
+    background: red;
+    z-index: 5;
+}
+
+.setaBaixo {
+    width: 35px;
+    position: absolute;
+    bottom: 5vh;
+    background: black;
+    padding: 5px;
+    border-radius: 50%;
+    animation: bounceArrow 1s infinite;
+}
+
+@keyframes bounceArrow {
+    0% {
+        bottom: 5vh;
+    }
+
+    50% {
+        bottom: 3vh;
+    }
+
+    100% {
+        bottom: 5vh;
+    }
+}
+
+// ---------- Keyframe Titulo ----------
+@keyframes glitch {
+    0% {
+        clip-path: inset(0 0 19% 0);
+    }
+
+    // 10% {
+    //     clip-path: inset(29% 0 6% 0);
+    // }
+
+    // 20% {
+    //     clip-path: inset(100% 0 1% 0);
+    // }
+
+    // 30% {
+    //     clip-path: inset(65% 0 23% 0);
+    // }
+
+    40% {
+        clip-path: inset(31% 0 52% 0);
+    }
+
+    // 50% {
+    //     clip-path: inset(71% 0 8% 0);
+    // }
+
+    // 60% {
+    //     clip-path: inset(40% 0 4% 0);
+    // }
+
+    // 70% {
+    //     clip-path: inset(44% 0 51% 0);
+    // }
+
+    80% {
+        clip-path: inset(13% 0 2% 0);
+    }
+
+    // 90% {
+    //     clip-path: inset(80% 0 100% 0);
+    // }
+
+    100% {
+        clip-path: inset(40% 0 47% 0);
+    }
 }
