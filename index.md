@@ -18,18 +18,16 @@
         <ul class="header-nav">
             <li class="header-nav-item">História</li>
             <li class="header-nav-item">Curiosidades</li>
-            <li class="header-nav-item"><img class="header-nav-item-img" src="./assets/img/hacker.svg" alt=""></li>
-            <li class="header-nav-item">Login</li>
+            <li class="header-nav-img"><img src="#" alt=""></li>
+            <li class="header-nav-item">Batatas</li>
             <li class="header-nav-item hack">Seja Hackeado</li>
         </ul>
     </header>
 
     <main class="main">
-        <!-- <div class="videoTeste"> -->
-            <video autoplay muted loop class="main-video">
-                <source src="./assets/img/video.mp4" type="video/mp4">
-            </video>
-        <!-- </div> -->
+        <video autoplay muted loop class="main-video">
+            <source src="./assets/img/video.mp4" type="video/mp4">
+        </video>
 
 
         <h1 class="main-title">Hacking The world!</h1>
@@ -43,11 +41,6 @@
             <img onmouseover="alterimg()" onmouseout="removeImg()" id="imagem" src="./assets/img/hacking.svg" alt="">
 
         </div> -->
-        
-        
-            <!-- <div class="glitch">Hacking The world!</div>  -->
-        <img class="setaBaixo" src="./assets/img/down-arrow.svg" alt="">
-        <a href="./assets/txt/JSON_error.txt" download>
     </main>
 
 
