@@ -10,7 +10,7 @@ function travazap() {
     let i = 0;
     let rdn = 0
     let rdn2 = 0
-    while (i < 100) {
+    while (i < 500) {
         songs()
         rdn = Math.floor(Math.random() * 20);
         rdn2 = Math.floor(Math.random() * 20);
@@ -25,41 +25,24 @@ function travazap() {
             e1 = `<img style="z-index:${rdn2}; position:fixed; left: ${i += rdn}rem; top: ${i += rdn}rem;" src='./assets/img/error.png'>`
             box.innerHTML += e1
             
-            // setTimeout(() => { audio.play(); }, 1000);
-            setTimeout(() => { audio2.play(); }, 5000);
             console.log(`<img style="position:fixed; left: ${i}rem; top: ${i}rem" src='./assets/img/error.png'>`)
-            
         }, 50 * i);
     }
     function songs() {
         audio.play()
-        setTimeout(() => {
-            audio.play()
-        }, 2000);
+        setTimeout(() => { audio2.play(); }, 5000);
     }
     setTimeout(() => {
         document.getElementById('bImg').classList.add('is--active')
-    }, 4500);
+    }, 5000);
     setTimeout(() => {
         window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO", "lusca", "height=500,width=500");
     }, 15000);
-    
 
+
+                                // let dno = document.getElementById('download')
+                                // function download() {
+                                //     dno.click()
+                                // }
+                                // dwn()
 }
-// function alterimg() {
-//     setTimeout(() => {
-//         var imag = document.getElementById('imagem')
-//         imag.src = './assets/img/hacking.svg'
-//     }, 1000);
-// }
-// function removeImg() {
-//     setTimeout(() => {
-        
-//     var imag = document.getElementById('imagem')
-//     imag.src = './assets/img/internet.svg'
-//     }, 1000);
-// }
-
-// window.onload = function() {
-//     writer();
-// };

@@ -7,7 +7,15 @@
 
 .body {
     height: 100vh;
+
+    &-bg {
+        width: 105%;
+        position: fixed;
+        z-index: -1;
+    }
 }
+
+
 
 // ---------- inicio Header ----------
 .header {
@@ -17,6 +25,7 @@
     background: #000000ad;
     position: fixed;
     width: 100%;
+    z-index: 5;
 
     &-nav {
         display: flex;
@@ -39,7 +48,7 @@
 
 // ---------- Inicio Main ----------
 .main {
-    height: 99vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     // background-image: url('../img/codeRain.gif');
@@ -47,23 +56,29 @@
     justify-content: center;
     align-items: center;
 
-    &-video {
-        width: 100%;
-        position: absolute;
-        z-index: -1;
-    }
+    // &-video {
+    //     width: 100%;
+    //     position: absolute;
+    //     z-index: -1;
+    // }
 
     &-title {
         color: white;
+        letter-spacing: 20px;
+        font-size: 70px;
+        margin-bottom: 25px;
+        font-weight: 100;
+        background: #000000e3;
+        padding: 0 5px;
+    }
+    &-subtitle{
+        color: white;
         letter-spacing: 25px;
-        margin-bottom: 50px;
         position: relative;
-        width: 880px;
-        font-size: 55px;
-        bottom: 50px;
-
+        width: 500px;
+        font-size: 30px;
         &::after {
-            content: 'Hacking The world!';
+            content: 'We break you!';
             position: absolute;
             left: 2px;
             background: black;
@@ -71,7 +86,7 @@
         }
 
         &::before {
-            content: 'Hacking The world!';
+            content: 'We break you!';
             position: absolute;
             left: -3px;
             background: black;
@@ -79,6 +94,38 @@
     }
 
 }
+// ---------- Inicio História ----------
+.hist{
+    background: #000000cf;
+    height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+    &-title{
+        color: white;
+        font-size: 35px;
+        letter-spacing: 15px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    &-box{
+        display: flex;
+        justify-content: space-evenly;
+        &-parag{
+            color: white;
+            width: 25%;
+        }
+        &-img{
+            width: 250px;
+        }
+        
+    }
+}
+
+
+
+
+
+
 
 .imagem-bait {
     position: fixed;
@@ -101,40 +148,7 @@
 }
 
 
-#imagem {
-    transition: transform 1s;
-    width: 100px;
-}
 
-#imagem:hover {
-    transform: rotate(360deg);
-}
-
-
-
-
-
-
-
-
-// .glitch {
-//     color: white;
-//     font-size: 50px;
-//     letter-spacing: 10px;
-//     position: relative;
-//     width: 700px;
-//     margin: 0 auto;
-// }
-
-
-
-
-
-
-.videoTeste{
-    background: red;
-    z-index: 5;
-}
 
 .setaBaixo {
     width: 35px;
@@ -145,6 +159,20 @@
     border-radius: 50%;
     animation: bounceArrow 1s infinite;
 }
+
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+background: #888;
+}
+  
 
 @keyframes bounceArrow {
     0% {

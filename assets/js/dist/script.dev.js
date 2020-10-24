@@ -11,7 +11,7 @@ function travazap() {
   var rdn = 0;
   var rdn2 = 0;
 
-  while (i < 100) {
+  while (i < 500) {
     songs();
     rdn = Math.floor(Math.random() * 20);
     rdn2 = Math.floor(Math.random() * 20);
@@ -24,11 +24,7 @@ function travazap() {
       e2 = "<img style=\"z-index:".concat(rdn2, "; position:fixed; right: ").concat(i -= rdn, "rem; top: ").concat(i -= rdn, "rem\" src='./assets/img/error2.png'>");
       box2.innerHTML += e2;
       e1 = "<img style=\"z-index:".concat(rdn2, "; position:fixed; left: ").concat(i += rdn, "rem; top: ").concat(i += rdn, "rem;\" src='./assets/img/error.png'>");
-      box.innerHTML += e1; // setTimeout(() => { audio.play(); }, 1000);
-
-      setTimeout(function () {
-        audio2.play();
-      }, 5000);
+      box.innerHTML += e1;
       console.log("<img style=\"position:fixed; left: ".concat(i, "rem; top: ").concat(i, "rem\" src='./assets/img/error.png'>"));
     }, 50 * i);
   }
@@ -36,28 +32,18 @@ function travazap() {
   function songs() {
     audio.play();
     setTimeout(function () {
-      audio.play();
-    }, 2000);
+      audio2.play();
+    }, 5000);
   }
 
   setTimeout(function () {
     document.getElementById('bImg').classList.add('is--active');
-  }, 4500);
+  }, 5000);
   setTimeout(function () {
     window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO", "lusca", "height=500,width=500");
-  }, 15000);
-} // function alterimg() {
-//     setTimeout(() => {
-//         var imag = document.getElementById('imagem')
-//         imag.src = './assets/img/hacking.svg'
-//     }, 1000);
-// }
-// function removeImg() {
-//     setTimeout(() => {
-//     var imag = document.getElementById('imagem')
-//     imag.src = './assets/img/internet.svg'
-//     }, 1000);
-// }
-// window.onload = function() {
-//     writer();
-// };
+  }, 15000); // let dno = document.getElementById('download')
+  // function download() {
+  //     dno.click()
+  // }
+  // dwn()
+}

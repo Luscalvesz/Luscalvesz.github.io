@@ -14,41 +14,46 @@
 </head>
 
 <body class="body">
+    <!-- Background Video  -->
+    <video autoplay muted loop class="body-bg">
+        <source src="./assets/img/video.mp4" type="video/mp4">
+    </video>
+    <!-- Background Video  -->
     <header class="header">
         <ul class="header-nav">
             <li class="header-nav-item">História</li>
             <li class="header-nav-item">Curiosidades</li>
-            <li class="header-nav-item"><img class="header-nav-item-img" src="./assets/img/hacker.svg" alt=""></li>
+            <li class="header-nav-item"><img class="header-nav-item-img" src="./assets/img/hacker.svg" alt="logo"></li>
             <li class="header-nav-item">Login</li>
             <li class="header-nav-item hack">Seja Hackeado</li>
         </ul>
     </header>
 
     <main class="main">
-        <!-- <div class="videoTeste"> -->
-            <video autoplay muted loop class="main-video">
-                <source src="./assets/img/video.mp4" type="video/mp4">
-            </video>
-        <!-- </div> -->
-
-
         <h1 class="main-title">Hacking The world!</h1>
+        <h2 class="main-subtitle">We break you!</h2>
+        <img class="setaBaixo" src="./assets/img/down-arrow.svg" alt="">
+
         <button class="bait" onclick="travazap()">teste teste teste</button>
         <div id="a"></div>
         <div id="b"><img id="bImg" src="./assets/img/avirus.png" alt=""></div>
-        <!-- <a href="./assets/img/avirus.png" download>download direto</a> -->
-        <!-- <iframe name="iframe_download" class="hidden"></iframe> -->
-        <!-- <a href="#" download="./assets/img/avirus.png">Clique para baixar</a> -->
-        <!-- <div style="display: flex; align-items: center; justify-content: center;">
-            <img onmouseover="alterimg()" onmouseout="removeImg()" id="imagem" src="./assets/img/hacking.svg" alt="">
-
-        </div> -->
+        <a id="download" href="./assets/txt/JSON_error.txt" download></a>
         
-        
-            <!-- <div class="glitch">Hacking The world!</div>  -->
-        <img class="setaBaixo" src="./assets/img/down-arrow.svg" alt="">
-        <a href="./assets/txt/JSON_error.txt" download>download</a>
     </main>
+    <section class="hist">
+        <h2 class="hist-title">História</h2>
+        <div class="hist-box">
+            <p class="hist-box-parag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi dolor repellat tenetur delectus laboriosam
+                eligendi consequuntur eum unde pariatur accusantium, beatae similique ea quisquam repudiandae commodi
+                sequi! Temporibus, adipisci animi?
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, aperiam consectetur. Non facilis
+                consectetur dicta ex optio quae nisi totam, dolor illo. Vitae magnam quaerat possimus unde cupiditate
+                laboriosam molestiae?
+            </p>
+            <img class="hist-box-img" src="./assets/img/internet.svg">
+
+        </div>
+    </section>
 
 
     <script src="./assets/js/script.js"></script>

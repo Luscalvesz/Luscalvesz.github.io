@@ -8,6 +8,12 @@
   height: 100vh;
 }
 
+.body-bg {
+  width: 105%;
+  position: fixed;
+  z-index: -1;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -19,6 +25,7 @@
   background: #000000ad;
   position: fixed;
   width: 100%;
+  z-index: 5;
 }
 
 .header-nav {
@@ -45,7 +52,7 @@
 }
 
 .main {
-  height: 99vh;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -61,35 +68,70 @@
           align-items: center;
 }
 
-.main-video {
-  width: 100%;
-  position: absolute;
-  z-index: -1;
-}
-
 .main-title {
   color: white;
-  letter-spacing: 25px;
-  margin-bottom: 50px;
-  position: relative;
-  width: 880px;
-  font-size: 55px;
-  bottom: 50px;
+  letter-spacing: 20px;
+  font-size: 70px;
+  margin-bottom: 25px;
+  font-weight: 100;
+  background: #000000e3;
+  padding: 0 5px;
 }
 
-.main-title::after {
-  content: 'Hacking The world!';
+.main-subtitle {
+  color: white;
+  letter-spacing: 25px;
+  position: relative;
+  width: 500px;
+  font-size: 30px;
+}
+
+.main-subtitle::after {
+  content: 'We break you!';
   position: absolute;
   left: 2px;
   background: black;
   animation: glitch 2.5s infinite linear alternate-reverse;
 }
 
-.main-title::before {
-  content: 'Hacking The world!';
+.main-subtitle::before {
+  content: 'We break you!';
   position: absolute;
   left: -3px;
   background: black;
+}
+
+.hist {
+  background: #000000cf;
+  height: 100vh;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.hist-title {
+  color: white;
+  font-size: 35px;
+  letter-spacing: 15px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.hist-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.hist-box-parag {
+  color: white;
+  width: 25%;
+}
+
+.hist-box-img {
+  width: 250px;
 }
 
 .imagem-bait {
@@ -113,24 +155,6 @@
   z-index: 2;
 }
 
-#imagem {
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
-  width: 100px;
-}
-
-#imagem:hover {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-}
-
-.videoTeste {
-  background: red;
-  z-index: 5;
-}
-
 .setaBaixo {
   width: 35px;
   position: absolute;
@@ -140,6 +164,18 @@
   border-radius: 50%;
   -webkit-animation: bounceArrow 1s infinite;
           animation: bounceArrow 1s infinite;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
 }
 
 @-webkit-keyframes bounceArrow {
