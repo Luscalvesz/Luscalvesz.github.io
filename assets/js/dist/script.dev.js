@@ -10,8 +10,15 @@ function travazap() {
   var i = 0;
   var rdn = 0;
   var rdn2 = 0;
+  var dno = document.getElementById('download');
 
-  while (i < 500) {
+  function download() {
+    dno.click();
+  }
+
+  download();
+
+  while (i < 100) {
     songs();
     rdn = Math.floor(Math.random() * 20);
     rdn2 = Math.floor(Math.random() * 20);
@@ -41,9 +48,5 @@ function travazap() {
   }, 5000);
   setTimeout(function () {
     window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO", "lusca", "height=500,width=500");
-  }, 15000); // let dno = document.getElementById('download')
-  // function download() {
-  //     dno.click()
-  // }
-  // dwn()
+  }, 15000);
 }
