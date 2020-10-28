@@ -318,10 +318,13 @@ background: #888;
         border-radius: 25px;
         width: 300px;
     }
-    .hist-title, .curios-title{
-        font-size: 30px;
-        letter-spacing: 10px;
-        font-weight: 100;
+    .hist, .curios{
+        width: 85%;
+        &-title{
+            font-size: 30px;
+            letter-spacing: 10px;
+            font-weight: 100;
+        }
     }
     .hist-box, .curios-box{
         display: flex;

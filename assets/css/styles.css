@@ -342,6 +342,9 @@
     border-radius: 25px;
     width: 300px;
   }
+  .hist, .curios {
+    width: 85%;
+  }
   .hist-title, .curios-title {
     font-size: 30px;
     letter-spacing: 10px;
