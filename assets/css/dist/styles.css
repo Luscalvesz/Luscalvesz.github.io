@@ -159,7 +159,7 @@
   background: #888;
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 1080px) {
   .body {
     height: 0;
   }
@@ -274,6 +274,17 @@
 
   .setaBaixo {
     z-index: -1;
+  }
+
+  .bait {
+    font-size: 30px;
+    margin-top: 50px;
+    background: green;
+    border: 1px solid green;
+    color: white;
+    padding: 15px 5px;
+    border-radius: 25px;
+    width: 300px;
   }
 
   .hist-title, .curios-title {
