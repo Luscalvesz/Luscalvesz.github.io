@@ -50,3 +50,10 @@ function travazap() {
     window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO", "lusca", "height=500,width=500");
   }, 15000);
 }
+
+function showHeader() {
+  var menu = document.getElementById('menu');
+  menu.classList.toggle('menuTransform');
+  var headerDrop = document.getElementById('drop');
+  headerDrop.classList.toggle('activeHeader');
+}

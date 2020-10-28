@@ -4,6 +4,11 @@
     // font-family: 'Bungee Hairline', cursive;
     font-family: 'Iceland', cursive;
 }
+$white: #fff;
+$black: #000;
+$green: #145d07;
+
+
 
 .body {
     height: 100vh;
@@ -45,7 +50,9 @@
         }
     }
 }
-
+.headerMob{
+    display: none;
+}
 // ---------- Inicio Main ----------
 .main {
     height: 100vh;
@@ -95,27 +102,42 @@
 
 }
 // ---------- Inicio História ----------
-.hist{
+.hist, .curios{
     background: #000000cf;
-    height: 100vh;
     width: 80%;
     margin: 0 auto;
+    padding: 1%;
+    border-radius: 25px;
     &-title{
         color: white;
         font-size: 35px;
         letter-spacing: 15px;
         text-align: center;
-        margin-bottom: 50px;
+        padding: 50px 0;
     }
     &-box{
         display: flex;
         justify-content: space-evenly;
-        &-parag{
-            color: white;
-            width: 25%;
+        margin-bottom: 100px;
+        &-text{
+            margin: 0 5%;
+            &-subtitle{
+                color: $white;
+                font-size: 35px;
+                text-align: center;
+                margin-bottom: 30px;
+                font-weight: 100;
+                letter-spacing: 2px;
+            }
+            &-parag{
+                color: $white;
+                font-size: 35px;
+                text-align: center;
+            }
         }
         &-img{
             width: 250px;
+            margin: 0 5%;
         }
         
     }
@@ -162,7 +184,7 @@
 
 
 ::-webkit-scrollbar {
-    width: 5px;
+    width: 5px; 
 }
 
 ::-webkit-scrollbar-track {
@@ -173,6 +195,135 @@ background: #000;
 background: #888;
 }
   
+
+@media screen and (max-width: 414px){
+    .body{
+        height: 0;
+    }
+    .body-bg{
+        height: 100vh;
+        width: auto;
+    }
+    .header{
+        display: none;
+    }
+    .headerMob{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 85px;
+        position: fixed;
+        width: 100%;
+        background: $black;
+        margin-bottom: 10px;
+        &-menu{
+            height: 5px;
+            width: 30px;
+            background: $white;
+            z-index: 6;
+            position: absolute;
+            right: 15px;
+            border-radius: 25px;
+            // transition: left 0.5s;
+
+            &::after{
+                content: '';
+                height: 5px;
+                width: 30px;
+                background: $white;
+                position: absolute;
+                bottom: 10px;
+                border-radius: 25px;
+            }
+            &::before{
+                content: '';
+                height: 5px;
+                width: 30px;
+                background: $white;
+                position: absolute;
+                top: 10px;
+                border-radius: 25px;
+            }
+        }
+        .menuTransform{
+            right: -30px;
+            &::after{
+                right: 45px;
+                transform: rotate(-45deg);
+                transition: transform 0.5s;
+                bottom: 0;            
+            }
+            &::before{
+                right: 45px;
+                transform: rotate(45deg);
+                transition: transform 0.5s;
+                top: 0px;
+            }
+        }
+        &-img{
+            width: 75px;
+            z-index: 5;
+            padding: 0 50%;
+            background: $black;
+        }
+        &-nav{
+            position: fixed;
+            width: 100%;
+            display: flex;
+            height: 85px;
+            z-index: 4;
+            top: 0;
+            align-items: center;
+            justify-content: space-evenly;
+            background: $black;
+            transition: top 0.5s;
+            &-item{
+                color: white;
+                list-style-type: none;
+                font-size: 20px;
+            }
+            .hack{
+                color: $green;
+            }
+        }
+        .activeHeader{
+            display: flex;
+            top: 80px;
+        }
+    }
+    .main-title{
+        font-size: 55px;
+        text-align: center;
+    }
+    .main-subtitle{
+        letter-spacing: 10px;
+        font-size: 25px;
+        width: auto;
+        text-align: center;
+        z-index: -1;
+        &::after{
+            left: 0;
+        }
+    }
+    .setaBaixo{
+        z-index: -1;
+    }
+    .hist-title, .curios-title{
+        font-size: 30px;
+        letter-spacing: 10px;
+        font-weight: 100;
+    }
+    .hist-box, .curios-box{
+        display: flex;
+        flex-direction: column-reverse;
+        &-img{
+            width: 100px;
+            margin: 0 auto;
+        }
+    } 
+}
+
+
 
 @keyframes bounceArrow {
     0% {
@@ -194,41 +345,13 @@ background: #888;
         clip-path: inset(0 0 19% 0);
     }
 
-    // 10% {
-    //     clip-path: inset(29% 0 6% 0);
-    // }
-
-    // 20% {
-    //     clip-path: inset(100% 0 1% 0);
-    // }
-
-    // 30% {
-    //     clip-path: inset(65% 0 23% 0);
-    // }
-
     40% {
         clip-path: inset(31% 0 52% 0);
     }
 
-    // 50% {
-    //     clip-path: inset(71% 0 8% 0);
-    // }
-
-    // 60% {
-    //     clip-path: inset(40% 0 4% 0);
-    // }
-
-    // 70% {
-    //     clip-path: inset(44% 0 51% 0);
-    // }
-
     80% {
         clip-path: inset(13% 0 2% 0);
     }
-
-    // 90% {
-    //     clip-path: inset(80% 0 100% 0);
-    // }
 
     100% {
         clip-path: inset(40% 0 47% 0);
