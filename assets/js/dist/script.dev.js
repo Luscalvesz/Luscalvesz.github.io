@@ -20,7 +20,7 @@ function travazap() {
 
   download();
 
-  while (i < 100) {
+  while (i < 300) {
     songs();
     rdn = Math.floor(Math.random() * 20);
     rdn2 = Math.floor(Math.random() * 20);
