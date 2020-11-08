@@ -301,7 +301,7 @@
   position: fixed;
   width: 100vw;
   height: 100vh;
-  z-index: 5;
+  z-index: 6;
 }
 
 .hack .modal-parag {
@@ -440,6 +440,7 @@
     width: 100%;
     background: #000;
     margin-bottom: 10px;
+    z-index: 6;
   }
   .headerMob-menu {
     height: 5px;
@@ -530,9 +531,19 @@
     display: flex;
     top: 80px;
   }
-  .main-title {
+  .main-box {
+    padding: 20px;
+  }
+  .main-box-title {
     font-size: 55px;
     text-align: center;
+    letter-spacing: 10px;
+  }
+  .main-box-subtitle {
+    letter-spacing: 6px;
+    width: 230px;
+    font-size: 25px;
+    padding: 0;
   }
   .main-subtitle {
     letter-spacing: 10px;
@@ -562,13 +573,23 @@
   }
   .hist,
   .curios {
-    width: 85%;
+    width: 95%;
   }
   .hist-title,
   .curios-title {
     font-size: 30px;
     letter-spacing: 10px;
     font-weight: 100;
+  }
+  .hist-carrossel .slick-prev,
+  .curios-carrossel .slick-prev {
+    height: 30px;
+    width: 30px;
+  }
+  .hist-carrossel .slick-next,
+  .curios-carrossel .slick-next {
+    height: 30px;
+    width: 30px;
   }
   .hist-box,
   .curios-box {
@@ -580,10 +601,43 @@
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
+  .hist-box-text,
+  .curios-box-text {
+    margin: 0 8%;
+  }
+  .hist-box-text-parag,
+  .curios-box-text-parag {
+    font-size: 25px;
+    margin-bottom: 25px;
+  }
   .hist-box-img,
   .curios-box-img {
     width: 100px;
     margin: 0 auto;
+  }
+  .hack-title {
+    font-size: 30px;
+    letter-spacing: 10px;
+    font-weight: 100;
+  }
+  .hack-subtitle {
+    font-size: 25px;
+  }
+  .hack-subtitle b {
+    letter-spacing: 7px;
+    font-size: 25px;
+  }
+  .hack-button {
+    background: red;
+    margin: 75px 0;
+  }
+  .hack .modal-parag {
+    font-size: 35px;
+    width: 95%;
+  }
+  .hack .modal-button {
+    font-size: 45px;
+    margin: 35px 0;
   }
 }
 

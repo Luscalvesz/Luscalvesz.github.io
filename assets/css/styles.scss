@@ -79,6 +79,7 @@ $green: #145d07;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
         &-title {
             color: white;
             letter-spacing: 20px;
@@ -262,23 +263,27 @@ $green: #145d07;
             transform: scale(1.2);
         }
     }
-    .modal{
+
+    .modal {
         display: none;
         background: #000;
         position: fixed;
         width: 100vw;
         height: 100vh;
-        z-index: 5;
-        &-parag{
+        z-index: 6;
+
+        &-parag {
             color: $white;
             font-size: 50px;
             width: 80%;
             text-align: center;
-            b{
+
+            b {
                 color: red;
             }
         }
-        &-button{
+
+        &-button {
             background: $green;
             color: $white;
             font-size: 50px;
@@ -289,18 +294,22 @@ $green: #145d07;
             margin: 50px 0;
             cursor: pointer;
         }
-        &-check{
+
+        &-check {
             display: flex;
             margin: 10px;
-            &-text{
+
+            &-text {
                 color: $white;
                 margin-right: 10px;
             }
+
             // &-input{
-            
+
             // }
         }
-        &-bait{
+
+        &-bait {
             background: black;
             color: $white;
             font-size: 20px;
@@ -308,13 +317,14 @@ $green: #145d07;
             border: 2px solid red;
             padding: 5px 10px;
             cursor: no-drop;
-            &.is--active{
+
+            &.is--active {
                 background: red;
                 cursor: pointer;
             }
         }
 
-        &.is--active{
+        &.is--active {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -396,6 +406,7 @@ $green: #145d07;
         width: 100%;
         background: $black;
         margin-bottom: 10px;
+        z-index: 6;
 
         &-menu {
             height: 5px;
@@ -482,22 +493,42 @@ $green: #145d07;
         }
     }
 
-    .main-title {
-        font-size: 55px;
-        text-align: center;
-    }
+    .main {
+        &-box {
+            padding: 20px;
 
-    .main-subtitle {
-        letter-spacing: 10px;
-        font-size: 25px;
-        width: auto;
-        text-align: center;
-        z-index: -1;
+            &-title {
+                font-size: 55px;
+                text-align: center;
+                letter-spacing: 10px;
+            }
 
-        &::after {
-            left: 0;
+            &-subtitle {
+                letter-spacing: 6px;
+                width: 230px;
+                font-size: 25px;
+                padding: 0;
+            }
+
+        }
+
+        &-subtitle {
+            letter-spacing: 10px;
+            font-size: 25px;
+            width: auto;
+            text-align: center;
+            z-index: -1;
+
+            &::after {
+                left: 0;
+            }
         }
     }
+
+
+
+
+
 
     .setaBaixo {
         z-index: -1;
@@ -518,25 +549,75 @@ $green: #145d07;
 
     .hist,
     .curios {
-        width: 85%;
+        width: 95%;
 
         &-title {
             font-size: 30px;
             letter-spacing: 10px;
             font-weight: 100;
         }
-    }
 
-    .hist-box,
-    .curios-box {
-        display: flex;
-        flex-direction: column-reverse;
+        // carrossel mob
+        &-carrossel {
 
-        &-img {
-            width: 100px;
-            margin: 0 auto;
+            .slick-prev {
+                height: 30px;
+                width: 30px;
+            }
+
+            .slick-next {
+                height: 30px;
+                width: 30px;
+            }
+        }
+        &-box {
+            display: flex;
+            flex-direction: column-reverse;
+            &-text{
+                margin: 0 8%;
+                &-parag{
+                    font-size: 25px;
+                    margin-bottom: 25px;
+
+                }
+            }
+            &-img {
+                width: 100px;
+                margin: 0 auto;
+            }
         }
     }
+    .hack{
+        &-title{
+            font-size: 30px;
+            letter-spacing: 10px;
+            font-weight: 100;
+        }
+        &-subtitle{
+            font-size: 25px;
+            b{
+                letter-spacing: 7px;
+                font-size: 25px;
+            }
+        }
+        &-button{
+            background: red;
+            margin: 75px 0;
+
+        }
+        .modal{
+            &-parag{
+                font-size: 35px;
+                width: 95%;
+            }
+            &-button{
+                font-size: 45px;
+                margin: 35px 0;
+            }
+        }
+    }
+
+    
 }
 
 
