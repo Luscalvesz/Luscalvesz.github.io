@@ -1,6 +1,9 @@
 function travazap() {
     const audio = new Audio('./assets/music/windows-10-error-sound.mp3');
     const audio2 = new Audio('./assets/music/avast2.mp3');
+    const modal = document.getElementById('modal')
+    const bait = document.getElementById('bait')
+
 
     let box2 = document.getElementById("b")
     let box = document.getElementById("a")
@@ -46,10 +49,30 @@ function travazap() {
         window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO", "lusca", "height=500,width=500");
     }, 15000);
 }
+function openModal() {
+    modal.classList.add('is--active')
+}
+function closeModal() {
+    modal.classList.remove('is--active')
+}
+function validate() {
+    bait.classList.toggle('is--active')
+}
 function showHeader() {
     var menu = document.getElementById('menu')
     menu.classList.toggle('menuTransform')
 
     var headerDrop = document.getElementById('drop')
     headerDrop.classList.toggle('activeHeader')
+}
+function scrollHist() {
+    // var hist = document.getElementById("hist");
+    // hist.scrollIntoView({behavior: 'smooth' });
+
+
+    document.querySelector('#hist').scrollIntoView({ 
+        behavior: 'smooth' 
+      }).animate({
+        scrollTop: $("#hist").offset().top
+    }, 1000);
 }

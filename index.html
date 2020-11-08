@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
     <!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"> -->
 
+    <link rel="stylesheet" type="text/css" href="./assets/css/slick.css" />
 </head>
 
 <body class="body">
@@ -21,11 +22,11 @@
     <!-- Background Video  -->
     <header class="header">
         <ul class="header-nav">
-            <li class="header-nav-item">História</li>
+            <li onclick="scrollHist()" class="header-nav-item">História</li>
             <li class="header-nav-item">Curiosidades</li>
             <li class="header-nav-item"><img class="header-nav-item-img" src="./assets/img/hacker.svg" alt="logo"></li>
             <li class="header-nav-item">Login</li>
-            <li class="header-nav-item hack">Seja Hackeado</li>
+            <li class="header-nav-item hacking">Seja Hackeado</li>
         </ul>
     </header>
     <header class="headerMob">
@@ -40,106 +41,145 @@
     </header>
 
     <main class="main">
-        <h1 class="main-title">Hacking The world!</h1>
-        <h2 class="main-subtitle">We break you!</h2>
+        <div class="main-box">
+            <h1 class="main-box-title">Hacking The world!</h1>
+            <h2 class="main-box-subtitle">We break you!</h2>
+        </div>
         <img class="setaBaixo" src="./assets/img/down-arrow.svg" alt="">
 
         <div id="a"></div>
         <div id="b"><img id="bImg" src="./assets/img/avirus.png" alt=""></div>
-        <a id="download" href="./assets/txt/JSON_error.txt" download><button class="bait"  onclick="travazap()">clique aqui para ganhar um premio!!!!</button></a>
+        <!-- <a id="download" href="./assets/txt/JSON_error.txt" download><button class="bait"  onclick="travazap()">clique aqui para ganhar um premio!!!!</button></a> -->
 
     </main>
-    <section class="hist">
+    <section id="hist" class="hist">
         <h2 class="hist-title">História</h2>
-        <div class="hist-box hist-box">
-            <div class="hist-box-text">
-                <h3 class="hist-box-text-subtitle">Subtitulo</h3>
+        <div class="hist-carrossel" id="histCarrossel">
+            <div class="hist-box">
+                <div class="hist-box-text">
+                    <h3 class="hist-box-text-subtitle">Subtitulo</h3>
 
-                <p class="hist-box-text-parag">O termo hacker tem sua origem no final da década de 50, inicio da década de 60.
-                </p>
+                    <p class="hist-box-text-parag">O termo hacker tem sua origem no final da década de 50, inicio da
+                        década de 60.
+                    </p>
+                </div>
+                <img class="hist-box-img" src="./assets/img/internet.svg">
             </div>
-            <img class="hist-box-img" src="./assets/img/internet.svg">
-        </div>
-        <div class="hist-box">
-            <div class="hist-box-text">
-                <h3 class="hist-box-text-subtitle">Subtitulo</h3>
-                
-                <p class="hist-box-text-parag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi dolor repellat
-                    tenetur delectus laboriosam
-                    eligendi consequuntur eum unde pariatur accusantium, beatae similique ea quisquam repudiandae
-                    commodi
-                    sequi! Temporibus, adipisci animi?
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, aperiam consectetur. Non
-                    facilis
-                    consectetur dicta ex optio quae nisi totam, dolor illo. Vitae magnam quaerat possimus unde
-                    cupiditate
-                    laboriosam molestiae?
-                </p>
+            <div class="hist-box">
+                <div class="hist-box-text">
+                    <h3 class="hist-box-text-subtitle">Subtitulo</h3>
+
+                    <p class="hist-box-text-parag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi dolor
+                        repellat
+                        tenetur delectus laboriosam
+                        eligendi consequuntur eum unde pariatur accusantium, beatae similique ea quisquam repudiandae
+                        commodi
+                        sequi! Temporibus, adipisci animi?
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, aperiam consectetur. Non
+                        facilis
+                        consectetur dicta ex optio quae nisi totam, dolor illo. Vitae magnam quaerat possimus unde
+                        cupiditate
+                        laboriosam molestiae?
+                    </p>
+                </div>
+                <img class="hist-box-img" src="./assets/img/internet.svg">
             </div>
-            <img class="hist-box-img" src="./assets/img/internet.svg">
         </div>
     </section>
 
     <section class="curios">
         <h2 class="curios-title">Curiosidades</h2>
-        <div class="curios-box">
-            <div class="curios-box-text">
-                <h3 class="curios-box-text-subtitle">Curiosidade 1</h3>
-                <p class="curios-box-text-parag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi dolor
-                    repellat
-                    tenetur delectus laboriosam
-                    eligendi consequuntur eum unde pariatur accusantium, beatae similique ea quisquam repudiandae
-                    commodi
-                    sequi! Temporibus, adipisci animi?
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, aperiam consectetur. Non
-                    facilis
-                    consectetur dicta ex optio quae nisi totam, dolor illo. Vitae magnam quaerat possimus unde
-                    cupiditate
-                    laboriosam molestiae?
-                </p>
+        <div class="curios-carrossel" id="curiosCarrossel">
+            <div class="curios-box">
+                <div class="curios-box-text">
+                    <h3 class="curios-box-text-subtitle">Curiosidade 1</h3>
+                    <p class="curios-box-text-parag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi dolor
+                        repellat
+                        tenetur delectus laboriosam
+                        eligendi consequuntur eum unde pariatur accusantium, beatae similique ea quisquam repudiandae
+                        commodi
+                        sequi! Temporibus, adipisci animi?
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, aperiam consectetur. Non
+                        facilis
+                        consectetur dicta ex optio quae nisi totam, dolor illo. Vitae magnam quaerat possimus unde
+                        cupiditate
+                        laboriosam molestiae?
+                    </p>
+                </div>
+                <img class="curios-box-img" src="./assets/img/internet.svg">
             </div>
-            <img class="curios-box-img" src="./assets/img/internet.svg">
+            <div class="curios-box">
+                <div class="curios-box-text">
+                    <h3 class="curios-box-text-subtitle">Curiosidade 2</h3>
+                    <p class="curios-box-text-parag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi dolor
+                        repellat
+                        tenetur delectus laboriosam
+                        eligendi consequuntur eum unde pariatur accusantium, beatae similique ea quisquam repudiandae
+                        commodi
+                        sequi! Temporibus, adipisci animi?
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, aperiam consectetur. Non
+                        facilis
+                        consectetur dicta ex optio quae nisi totam, dolor illo. Vitae magnam quaerat possimus unde
+                        cupiditate
+                        laboriosam molestiae?
+                    </p>
+                </div>
+                <img class="curios-box-img" src="./assets/img/internet.svg">
+            </div>
+            <div class="curios-box">
+                <div class="curios-box-text">
+                    <h3 class="curios-box-text-subtitle">Curiosidade 3</h3>
+                    <p class="curios-box-text-parag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi dolor
+                        repellat
+                        tenetur delectus laboriosam
+                        eligendi consequuntur eum unde pariatur accusantium, beatae similique ea quisquam repudiandae
+                        commodi
+                        sequi! Temporibus, adipisci animi?
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, aperiam consectetur. Non
+                        facilis
+                        consectetur dicta ex optio quae nisi totam, dolor illo. Vitae magnam quaerat possimus unde
+                        cupiditate
+                        laboriosam molestiae?
+                    </p>
+                </div>
+                <img class="curios-box-img" src="./assets/img/internet.svg">
+            </div>
         </div>
-        <div class="curios-box">
-            <div class="curios-box-text">
-                <h3 class="curios-box-text-subtitle">Curiosidade 2</h3>
-                <p class="curios-box-text-parag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi dolor
-                    repellat
-                    tenetur delectus laboriosam
-                    eligendi consequuntur eum unde pariatur accusantium, beatae similique ea quisquam repudiandae
-                    commodi
-                    sequi! Temporibus, adipisci animi?
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, aperiam consectetur. Non
-                    facilis
-                    consectetur dicta ex optio quae nisi totam, dolor illo. Vitae magnam quaerat possimus unde
-                    cupiditate
-                    laboriosam molestiae?
-                </p>
+    </section>
+
+    <section class="hack">
+        <h2 class="hack-title">Seja Hackeado!</h2>
+        <p class="hack-subtitle">Quer saber como é sofrer um ataque de negação de serviço?<br><br> <b>Por sua conta e
+                risco</b>, clique no botão abaixo e descubra!</p>
+        <button class="hack-button" onclick="openModal()">Iniciar ataque!</button>
+
+
+
+
+
+
+
+
+        <div class="modal" id="modal">
+            <p class="modal-parag"> <b>Voce tem certeza?</b> Ao clicar em "hackear", você declara ciência de que um ataque de negação de serviço será direcionado a sua máquina. <br>Abdicando o criador do site de toda a culpa por possíveis danos causados!</p>
+            <button class="modal-button" onclick="closeModal()">Voltar</button>
+            <div class="modal-check">
+                <p class="modal-check-text">Estou ciente e quero continuar!</p>
+                <input class="modal-check-input" onclick="validate()" type="checkbox" id="congfirm" placeholder="tenho coencia e quero continuar">
             </div>
-            <img class="curios-box-img" src="./assets/img/internet.svg">
-        </div>
-        <div class="curios-box">
-            <div class="curios-box-text">
-                <h3 class="curios-box-text-subtitle">Curiosidade 3</h3>
-                <p class="curios-box-text-parag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi dolor
-                    repellat
-                    tenetur delectus laboriosam
-                    eligendi consequuntur eum unde pariatur accusantium, beatae similique ea quisquam repudiandae
-                    commodi
-                    sequi! Temporibus, adipisci animi?
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, aperiam consectetur. Non
-                    facilis
-                    consectetur dicta ex optio quae nisi totam, dolor illo. Vitae magnam quaerat possimus unde
-                    cupiditate
-                    laboriosam molestiae?
-                </p>
-            </div>
-            <img class="curios-box-img" src="./assets/img/internet.svg">
+            <a id="download" href="./assets/txt/JSON_error.txt" download><button id="bait" class="modal-bait"
+                    onclick="travazap()">Hackear</button></a>
         </div>
     </section>
 
 
+
+
+    <script type="text/javascript" src="./assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/js/slick.min.js"></script>
+    <script src="./assets/js/carrossel.js"></script>
     <script src="./assets/js/script.js"></script>
+
 </body>
 
 </html>
