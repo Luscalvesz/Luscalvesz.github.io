@@ -329,6 +329,7 @@ $green: #145d07;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            top: 0;
         }
     }
 }
@@ -348,13 +349,10 @@ $green: #145d07;
     transition: bottom 1.5s;
 }
 
-.is--active {
+.activeAvast {
     bottom: 0 !important;
-    z-index: 2;
+    z-index: 7;
 }
-
-
-
 
 .setaBaixo {
     width: 35px;
@@ -366,6 +364,40 @@ $green: #145d07;
     animation: bounceArrow 1s infinite;
 }
 
+.modalConfirm {
+    display: none;
+    background: $black;
+    position: fixed;
+    padding: 150px 15px;
+    border-radius: 25px;
+    border: 3px solid red;
+
+    &-text {
+        color: white;
+        font-size: 25px;
+    }
+
+    &-close {
+        background: url(../img/arrow.svg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 50px;
+        width: 50px;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0px;
+    }
+
+    &.activeConfirm {
+
+        display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
+    }
+}
 
 
 
@@ -570,54 +602,64 @@ $green: #145d07;
                 width: 30px;
             }
         }
+
         &-box {
             display: flex;
             flex-direction: column-reverse;
-            &-text{
+
+            &-text {
                 margin: 0 8%;
-                &-parag{
+
+                &-parag {
                     font-size: 25px;
                     margin-bottom: 25px;
 
                 }
             }
+
             &-img {
                 width: 100px;
                 margin: 0 auto;
             }
         }
     }
-    .hack{
-        &-title{
+
+    .hack {
+        &-title {
             font-size: 30px;
             letter-spacing: 10px;
             font-weight: 100;
         }
-        &-subtitle{
+
+        &-subtitle {
             font-size: 25px;
-            b{
+
+            b {
                 letter-spacing: 7px;
                 font-size: 25px;
             }
         }
-        &-button{
+
+        &-button {
             background: red;
             margin: 75px 0;
 
         }
-        .modal{
-            &-parag{
+
+        .modal {
+            &-parag {
                 font-size: 35px;
                 width: 95%;
             }
-            &-button{
+
+            &-button {
                 font-size: 45px;
                 margin: 35px 0;
             }
         }
     }
 
-    
+
 }
 
 

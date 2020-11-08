@@ -46,7 +46,7 @@ function travazap() {
   }
 
   setTimeout(function () {
-    document.getElementById('bImg').classList.add('is--active');
+    document.getElementById('bImg').classList.add('activeAvast');
   }, 5000);
   setTimeout(function () {
     window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO", "lusca", "height=500,width=500");
@@ -59,10 +59,6 @@ function openModal() {
 
 function closeModal() {
   modal.classList.remove('is--active');
-}
-
-function validate() {
-  bait.classList.toggle('is--active');
 }
 
 function showHeader() {
@@ -80,4 +76,25 @@ function scrollHist() {
   }).animate({
     scrollTop: $("#hist").offset().top
   }, 1000);
+}
+
+function closeConfirm() {
+  modalConfirm.classList.remove('activeConfirm');
+}
+
+var confirm = document.getElementById("confirm").checked = false;
+
+function activeHack() {
+  bait.classList.toggle('is--active');
+  confirm = document.getElementById("confirm").checked = true;
+}
+
+function validateTravazap() {
+  var modalConfirm = document.getElementById("modalConfirm");
+
+  if (confirm == true) {
+    travazap(); // console.log('errado')
+  } else if (confirm == false) {
+    modalConfirm.classList.add('activeConfirm');
+  }
 }

@@ -277,6 +277,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  top: 0;
 }
 
 .imagem-bait {
@@ -293,9 +294,9 @@
   transition: bottom 1.5s;
 }
 
-.is--active {
+.activeAvast {
   bottom: 0 !important;
-  z-index: 2;
+  z-index: 7;
 }
 
 .setaBaixo {
@@ -306,6 +307,34 @@
   padding: 5px;
   border-radius: 50%;
   animation: bounceArrow 1s infinite;
+}
+
+.modalConfirm {
+  display: none;
+  background: #000;
+  position: fixed;
+  padding: 150px 15px;
+  border-radius: 25px;
+  border: 3px solid red;
+}
+.modalConfirm-text {
+  color: white;
+  font-size: 25px;
+}
+.modalConfirm-close {
+  background: url(../img/arrow.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 50px;
+  width: 50px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0px;
+}
+.modalConfirm.activeConfirm {
+  display: flex;
 }
 
 ::-webkit-scrollbar {

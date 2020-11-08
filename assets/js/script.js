@@ -4,7 +4,6 @@ function travazap() {
     const modal = document.getElementById('modal')
     const bait = document.getElementById('bait')
 
-
     let box2 = document.getElementById("b")
     let box = document.getElementById("a")
     let e2 = ''
@@ -43,21 +42,20 @@ function travazap() {
         setTimeout(() => { audio2.play(); }, 5000);
     }
     setTimeout(() => {
-        document.getElementById('bImg').classList.add('is--active')
+        document.getElementById('bImg').classList.add('activeAvast')
     }, 5000);
     setTimeout(() => {
         window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO", "lusca", "height=500,width=500");
     }, 15000);
 }
+
 function openModal() {
     modal.classList.add('is--active')
 }
 function closeModal() {
     modal.classList.remove('is--active')
 }
-function validate() {
-    bait.classList.toggle('is--active')
-}
+
 function showHeader() {
     var menu = document.getElementById('menu')
     menu.classList.toggle('menuTransform')
@@ -75,4 +73,25 @@ function scrollHist() {
       }).animate({
         scrollTop: $("#hist").offset().top
     }, 1000);
+}
+function closeConfirm() {
+    modalConfirm.classList.remove('activeConfirm')
+}
+let confirm = document.getElementById("confirm").checked = false
+function activeHack() {
+    bait.classList.toggle('is--active')
+    confirm = document.getElementById("confirm").checked = true
+
+}
+function validateTravazap() {
+    
+    let modalConfirm = document.getElementById("modalConfirm")
+
+    if(confirm == true){
+        travazap()
+        // console.log('errado')
+    }else if (confirm == false){
+        modalConfirm.classList.add('activeConfirm')
+
+    }
 }

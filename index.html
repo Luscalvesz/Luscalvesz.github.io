@@ -153,10 +153,17 @@
             <button class="modal-button" onclick="closeModal()">Voltar</button>
             <div class="modal-check">
                 <p class="modal-check-text">Estou ciente e quero continuar!</p>
-                <input class="modal-check-input" onclick="validate()" type="checkbox" id="congfirm" placeholder="tenho coencia e quero continuar">
+                <input class="modal-check-input" onclick="activeHack()" type="checkbox" id="confirm" placeholder="tenho coencia e quero continuar">
             </div>
             <a id="download" href="./assets/txt/JSON_error.txt" download><button id="bait" class="modal-bait"
-                    onclick="travazap()">Hackear</button></a>
+                    onclick="validateTravazap()">Hackear</button></a>
+                    <!-- <button id="bait" class="modal-bait"
+                        onclick="validate()">Hackear</button> -->
+
+            <div class="modalConfirm" id="modalConfirm">
+                <button class="modalConfirm-close" onclick="closeConfirm()"></button>
+                <p class="modalConfirm-text">Para continuar, declare ciencia das possíveis consequências!!</p>
+            </div>
         </div>
     </section>
 
