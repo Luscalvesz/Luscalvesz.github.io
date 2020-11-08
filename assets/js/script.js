@@ -89,7 +89,7 @@ function validateTravazap() {
 
     if(confirm == true){
         travazap()
-        // console.log('errado')
+        console.log('errado')
     }else if (confirm == false){
         modalConfirm.classList.add('activeConfirm')
 

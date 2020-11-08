@@ -93,7 +93,8 @@ function validateTravazap() {
   var modalConfirm = document.getElementById("modalConfirm");
 
   if (confirm == true) {
-    travazap(); // console.log('errado')
+    travazap();
+    console.log('errado');
   } else if (confirm == false) {
     modalConfirm.classList.add('activeConfirm');
   }

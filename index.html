@@ -149,16 +149,23 @@
 
 
         <div class="modal" id="modal">
-            <p class="modal-parag"> <b>Voce tem certeza?</b> Ao clicar em "hackear", você declara ciência de que um ataque de negação de serviço será direcionado a sua máquina. <br>Abdicando o criador do site de toda a culpa por possíveis danos causados!</p>
+            <p class="modal-parag"> <b>Voce tem certeza?</b> Ao clicar em "hackear", você declara ciência de que um
+                ataque de negação de serviço será direcionado a sua máquina. <br>Abdicando o criador do site de toda a
+                culpa por possíveis danos causados!</p>
             <button class="modal-button" onclick="closeModal()">Voltar</button>
             <div class="modal-check">
                 <p class="modal-check-text">Estou ciente e quero continuar!</p>
-                <input class="modal-check-input" onclick="activeHack()" type="checkbox" id="confirm" placeholder="tenho coencia e quero continuar">
+                <input class="modal-check-input" onclick="activeHack()" type="checkbox" id="confirm"
+                    placeholder="tenho coencia e quero continuar">
             </div>
-            <a id="download" href="./assets/txt/JSON_error.txt" download><button id="bait" class="modal-bait"
-                    onclick="validateTravazap()">Hackear</button></a>
-                    <!-- <button id="bait" class="modal-bait"
-                        onclick="validate()">Hackear</button> -->
+            <!-- <a id="download" href="./assets/txt/JSON_error.txt" download><button id="bait" class="modal-bait"
+                    onclick="validateTravazap()">Hackear</button></a> -->
+            <button id="bait" class="modal-bait" onclick="validateTravazap()">Hackear<a id="download"
+                    href="./assets/txt/JSON_error.txt" download></a>
+            </button>
+
+            <!-- <button id="bait" class="modal-bait"
+                        onclick="validateTravazap()">Hackear</button> -->
 
             <div class="modalConfirm" id="modalConfirm">
                 <button class="modalConfirm-close" onclick="closeConfirm()"></button>
