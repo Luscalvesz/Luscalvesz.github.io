@@ -80,8 +80,10 @@ function closeConfirm() {
 let confirm = document.getElementById("confirm").checked = false
 function activeHack() {
     bait.classList.toggle('is--active')
-    confirm = document.getElementById("confirm").checked = true
-
+    confirm = document.getElementById("confirm").checked = false
+    if(bait.classList.value == "modal-bait is--active"){
+        confirm = document.getElementById("confirm").checked = true
+    }
 }
 function validateTravazap() {
     
