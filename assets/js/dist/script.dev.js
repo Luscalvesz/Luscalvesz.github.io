@@ -20,7 +20,7 @@ function travazap() {
 
   download();
 
-  while (i < 300) {
+  while (i < 100) {
     songs();
     rdn = Math.floor(Math.random() * 20);
     rdn2 = Math.floor(Math.random() * 20);
@@ -86,7 +86,11 @@ var confirm = document.getElementById("confirm").checked = false;
 
 function activeHack() {
   bait.classList.toggle('is--active');
-  confirm = document.getElementById("confirm").checked = true;
+  confirm = document.getElementById("confirm").checked = false;
+
+  if (bait.classList.value == "modal-bait is--active") {
+    confirm = document.getElementById("confirm").checked = true;
+  }
 }
 
 function validateTravazap() {

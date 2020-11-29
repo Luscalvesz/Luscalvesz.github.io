@@ -176,10 +176,15 @@
   text-align: center;
 }
 
+.hist-box-text-parag .red,
+.curios-box-text-parag .red {
+  color: red;
+}
+
 .hist-box-img,
 .curios-box-img {
-  width: 250px;
-  margin: 0 5%;
+  width: 80px;
+  margin: 15px 0;
 }
 
 .hist-carrossel,
@@ -647,7 +652,7 @@
   }
   .hist-box-img,
   .curios-box-img {
-    width: 100px;
+    width: 50px;
     margin: 0 auto;
   }
   .hack-title {

@@ -157,12 +157,15 @@ $green: #145d07;
                 color: $white;
                 font-size: 35px;
                 text-align: center;
+                .red{
+                    color: red;
+                }
             }
         }
 
         &-img {
-            width: 250px;
-            margin: 0 5%;
+            width: 80px;
+            margin: 15px 0;
         }
 
     }
@@ -619,7 +622,7 @@ $green: #145d07;
             }
 
             &-img {
-                width: 100px;
+                width: 50px;
                 margin: 0 auto;
             }
         }
