@@ -23,10 +23,10 @@
     <header class="header">
         <ul class="header-nav">
             <li onclick="scrollHist()" class="header-nav-item">História</li>
-            <li class="header-nav-item">Curiosidades</li>
+            <li onclick="scrollCurios()" class="header-nav-item">Curiosidades</li>
             <li class="header-nav-item"><img class="header-nav-item-img" src="./img/hacker.svg" alt="logo"></li>
-            <li class="header-nav-item">Login</li>
-            <li class="header-nav-item hacking">Seja Hackeado</li>
+            <li class="header-nav-item"><a href="./login.html">Login</a></li>
+            <li onclick="scrollHack()" class="header-nav-item hacking">Seja Hackeado</li>
         </ul>
     </header>
     <header class="headerMob">
@@ -49,42 +49,37 @@
 
         <div id="a"></div>
         <div id="b"><img id="bImg" src="./img/avirus.png" alt=""></div>
-        <!-- <a id="download" href="./txt/JSON_error.txt" download><button class="bait"  onclick="travazap()">clique aqui para ganhar um premio!!!!</button></a> -->
 
     </main>
     <section id="hist" class="hist">
+        <span id="scrollHist"></span>
         <h2 class="hist-title">História</h2>
         <div class="hist-carrossel" id="histCarrossel">
             <div class="hist-box">
                 <div class="hist-box-text">
-                    <h3 class="hist-box-text-subtitle">Subtitulo</h3>
+                    <!-- <h3 class="hist-box-text-subtitle">A origem do termo hacker</h3> -->
 
-                    <p class="hist-box-text-parag">O termo hacker tem sua origem no final da década de 50, inicio da
-                        década de 60.
+                    <p class="hist-box-text-parag">A origem do termo hacker surgiu na <span class="red"> década de 1960</span>, nos Estados Unidos. <br>Surgiu com o uso da expressão “<span class="red">hack</span>” para designar uma solução inovadora para qualquer problema. <br> Com o passar dos anos, <span class="red">o termo foi associado a programadores</span>, que na época estavam destacando-se no Instituto de Tecnologia de Massachusetts (MIT) e em outras partes do mundo.
                     </p>
                 </div>
                 <img class="hist-box-img" src="./img/internet.svg">
+                <span class="hist-box-number">1</span>
             </div>
             <div class="hist-box">
                 <div class="hist-box-text">
-                    <h3 class="hist-box-text-subtitle">Subtitulo</h3>
-
-                    <p class="hist-box-text-parag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi dolor
-                        repellat
-                        tenetur delectus laboriosam
-                        eligendi consequuntur eum unde pariatur accusantium, beatae similique ea quisquam repudiandae
-                        commodi
-                        sequi! Temporibus, adipisci animi?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, aperiam consectetur. Non
-                        facilis
+                    <!-- <h3 class="hist-box-text-subtitle">Subtitulo</h3> -->
+                    <p class="hist-box-text-parag"><span class="red">Hackers são pessoas com um conhecimento profundo de informática e computação</span>,<br> capazes de desenvolver e modificar softwares e hardwares, <span class="red">não necessariamente para cometer algum crime.</span><br>
+                        Portanto, qualquer pessoa que tenha conhecimento profundo em alguma área específica da computação, <span class="red">pode ser chamado de hacker</span>.               
                     </p>
                 </div>
                 <img class="hist-box-img" src="./img/internet.svg">
+                <span class="hist-box-number">2</span>
             </div>
         </div>
     </section>
 
     <section class="curios">
+        <span id="scrollCurios"></span>
         <h2 class="curios-title">Curiosidades</h2>
         <div class="curios-carrossel" id="curiosCarrossel">
             <div class="curios-box">
@@ -97,11 +92,10 @@
             </div>
             <div class="curios-box">
                 <div class="curios-box-text">
-                    <h3 class="curios-box-text-subtitle">Controlar o seu carro!</h3>
+                    <h3 class="curios-box-text-subtitle">Controlando o seu carro!</h3>
                     <img class="curios-box-img" src="./img/car-wifi.svg">
                     <p class="curios-box-text-parag">Especialistas em segurança da Universidade de Washington mostraram que novos <span class="red">carros com computador de bordo correm grande risco de serem hackeados</span>.<br>
                         Os cientistas foram capazes de <span class="red">controlar veículos</span> e operar mais de uma dezena de funções enquanto os carros estavam em movimento, entre elas o freio seletivo de cada uma das rodas e até <span class="red">desligar o motor completamente</span>. Uma vez que eles conseguiam controlar os carros, <span class="red">as ações do motoristas eram totalmente ignoradas</span>.<br>
-                        Possíveis pontos de entrada de um hacker no sistema de um carro são por meio de: <span class="red">Bluetooth, rede celular, monitor de pressão dos pneus e até por arquivos de música</span>.
                     </p>
                 </div>
             </div>
@@ -118,6 +112,7 @@
     </section>
 
     <section class="hack">
+        <span id="scrollHack"></span>
         <h2 class="hack-title">Seja Hackeado!</h2>
         <p class="hack-subtitle">Quer saber como é sofrer um ataque de negação de serviço?<br><br> <b>Por sua conta e
                 risco</b>, clique no botão abaixo e descubra!</p>

@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    // font-family: 'Bungee Hairline', cursive;
     font-family: 'Iceland', cursive;
     outline: none;
 }
@@ -21,8 +20,6 @@ $green: #145d07;
     }
 }
 
-
-
 // ---------- inicio Header ----------
 .header {
     display: flex;
@@ -32,21 +29,26 @@ $green: #145d07;
     position: fixed;
     width: 100%;
     z-index: 5;
-
     &-nav {
         display: flex;
         justify-content: space-evenly;
         width: 100%;
         align-items: center;
-
         &-item {
             color: white;
             list-style-type: none;
             font-size: 2rem;
-
-            // font-family: 'Aldrich', sans-serif;
+            cursor: pointer;
+            
             &-img {
                 width: 70px;
+            }
+            a{
+                color: white;
+                text-decoration: none;
+            }
+            &.block{
+                cursor: no-drop;
             }
         }
     }
@@ -61,16 +63,8 @@ $green: #145d07;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    // background-image: url('../img/codeRain.gif');
-    // background-size: cover;
     justify-content: center;
     align-items: center;
-
-    // &-video {
-    //     width: 100%;
-    //     position: absolute;
-    //     z-index: -1;
-    // }
 
     &-box {
         background: black;
@@ -127,7 +121,7 @@ $green: #145d07;
 
     padding: 1%;
     border-radius: 25px;
-
+    position: relative;
     &-title {
         color: white;
         font-size: 35px;
@@ -167,7 +161,11 @@ $green: #145d07;
             width: 80px;
             margin: 15px 0;
         }
-
+        &-number{
+            color: white;
+            position: absolute;
+            bottom: 10px;
+        }
     }
 
     // carrossel
@@ -227,6 +225,7 @@ $green: #145d07;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 
     &-title {
         color: white;
@@ -306,10 +305,6 @@ $green: #145d07;
                 color: $white;
                 margin-right: 10px;
             }
-
-            // &-input{
-
-            // }
         }
 
         &-bait {
@@ -393,13 +388,8 @@ $green: #145d07;
         top: 0;
         right: 0px;
     }
-
     &.activeConfirm {
-
         display: flex;
-        // flex-direction: column;
-        // justify-content: center;
-        // align-items: center;
     }
 }
 
@@ -408,7 +398,7 @@ $green: #145d07;
 .logcad{
     height: 475px;
     width: 1000px;
-    background: rgba(46, 46, 46, 0.863);
+    background: rgba(0, 76, 0, 0.8);
     display: flex;
     position: relative;
     margin: 0 auto;
@@ -455,8 +445,9 @@ $green: #145d07;
             color: white;
             font-size: 20px;
             a{
-                color: green;
+                color: white;
                 text-transform: uppercase;
+                letter-spacing: 2px;
             }
         }
     }
@@ -494,7 +485,11 @@ $green: #145d07;
     transform: translate(500px,0px);
 }
 
-
+// scroll
+#scrollHist, #scrollCurios, #scrollHack{
+    position: absolute;
+    top: -100px;
+}
 
 ::-webkit-scrollbar {
     width: 5px;
@@ -507,7 +502,6 @@ $green: #145d07;
 ::-webkit-scrollbar-thumb {
     background: #888;
 }
-
 
 @media screen and (max-width: 780px) {
     .body {
@@ -607,10 +601,7 @@ $green: #145d07;
                 list-style-type: none;
                 font-size: 20px;
             }
-
-            .hack {
-                color: $green;
-            }
+            
         }
 
         .activeHeader {
@@ -651,11 +642,6 @@ $green: #145d07;
         }
     }
 
-
-
-
-
-
     .setaBaixo {
         z-index: -1;
         height: 50px;
@@ -676,13 +662,11 @@ $green: #145d07;
     .hist,
     .curios {
         width: 95%;
-
         &-title {
             font-size: 30px;
             letter-spacing: 10px;
             font-weight: 100;
         }
-
         // carrossel mob
         &-carrossel {
 
@@ -753,11 +737,7 @@ $green: #145d07;
         }
     }
 
-
 }
-
-
-
 @keyframes bounceArrow {
     0% {
         bottom: 5vh;
@@ -771,7 +751,6 @@ $green: #145d07;
         bottom: 5vh;
     }
 }
-
 // ---------- Keyframe Titulo ----------
 @keyframes glitch {
     0% {

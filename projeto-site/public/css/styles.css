@@ -46,10 +46,20 @@
   color: white;
   list-style-type: none;
   font-size: 2rem;
+  cursor: pointer;
 }
 
 .header-nav-item-img {
   width: 70px;
+}
+
+.header-nav-item a {
+  color: white;
+  text-decoration: none;
+}
+
+.header-nav-item.block {
+  cursor: no-drop;
 }
 
 .headerMob {
@@ -132,6 +142,7 @@
   margin: 50px auto;
   padding: 1%;
   border-radius: 25px;
+  position: relative;
 }
 
 .hist-title,
@@ -185,6 +196,13 @@
 .curios-box-img {
   width: 80px;
   margin: 15px 0;
+}
+
+.hist-box-number,
+.curios-box-number {
+  color: white;
+  position: absolute;
+  bottom: 10px;
 }
 
 .hist-carrossel,
@@ -255,6 +273,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .hack-title {
@@ -445,7 +464,7 @@
 .logcad {
   height: 475px;
   width: 1000px;
-  background: rgba(46, 46, 46, 0.863);
+  background: rgba(0, 76, 0, 0.8);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -513,8 +532,9 @@
 }
 
 .logcad-form-span a {
-  color: green;
+  color: white;
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .movement {
@@ -561,6 +581,11 @@
 .active {
   -webkit-transform: translate(500px, 0px);
           transform: translate(500px, 0px);
+}
+
+#scrollHist, #scrollCurios, #scrollHack {
+  position: absolute;
+  top: -100px;
 }
 
 ::-webkit-scrollbar {
@@ -682,9 +707,6 @@
     color: white;
     list-style-type: none;
     font-size: 20px;
-  }
-  .headerMob-nav .hack {
-    color: #145d07;
   }
   .headerMob .activeHeader {
     display: -webkit-box;
