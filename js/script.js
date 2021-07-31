@@ -71,7 +71,7 @@ function loading() {
             travazap()
             loading.style.display = "none"
         }
-    }, 10);
+    }, 100);
     
 }
 
