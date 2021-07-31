@@ -550,6 +550,9 @@ $green: #145d07;
         }
     }
 }
+.footerMob{
+    display: none;
+}
 .active {
     transform: translate(500px, 0px);
 }
@@ -800,8 +803,70 @@ $green: #145d07;
                 font-size: 45px;
                 margin: 35px 0;
             }
+            &-check{
+
+                &-input{
+                    margin-top: 15px;
+                }
+                &-text{
+                    width: 220px;
+                }
+            }
+            &-bait{
+                margin-top: 25px;
+            }
         }
     }
+
+    .footer{
+        display: none;
+    }
+    .footerMob{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: black;
+        margin-top: 75px;
+        &-box{
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            &-dev{
+                color: white;
+                font-size: 1.6rem;
+            }
+            &-img{
+                width: 40px;
+                border-radius: 15px;
+                margin: 0 10px;
+            }
+        }
+        &-link{
+            display: flex;
+            margin: 10px 0;
+            align-items: center;
+            &-dev{
+                color: white;
+                font-size: 1.2rem;
+            }
+            &-rainbow{
+                animation: rainbow 5s linear infinite;
+                font-size: 20px;
+                font-weight: 800;
+                margin: 0 10px;
+            }
+            &-text{
+                color: white;
+                font-size: 1rem;
+            }
+        }
+
+    }
+
+
+
+
+
 }
 
 @keyframes bounceArrow {

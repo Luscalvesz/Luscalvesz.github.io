@@ -681,6 +681,10 @@
           animation: rainbow 5s linear infinite;
 }
 
+.footerMob {
+  display: none;
+}
+
 .active {
   -webkit-transform: translate(500px, 0px);
           transform: translate(500px, 0px);
@@ -926,6 +930,74 @@
   .hack .modal-button {
     font-size: 45px;
     margin: 35px 0;
+  }
+  .hack .modal-check-input {
+    margin-top: 15px;
+  }
+  .hack .modal-check-text {
+    width: 220px;
+  }
+  .hack .modal-bait {
+    margin-top: 25px;
+  }
+  .footer {
+    display: none;
+  }
+  .footerMob {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: black;
+    margin-top: 75px;
+  }
+  .footerMob-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 10px;
+  }
+  .footerMob-box-dev {
+    color: white;
+    font-size: 1.6rem;
+  }
+  .footerMob-box-img {
+    width: 40px;
+    border-radius: 15px;
+    margin: 0 10px;
+  }
+  .footerMob-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 10px 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footerMob-link-dev {
+    color: white;
+    font-size: 1.2rem;
+  }
+  .footerMob-link-rainbow {
+    -webkit-animation: rainbow 5s linear infinite;
+            animation: rainbow 5s linear infinite;
+    font-size: 20px;
+    font-weight: 800;
+    margin: 0 10px;
+  }
+  .footerMob-link-text {
+    color: white;
+    font-size: 1rem;
   }
 }
 
