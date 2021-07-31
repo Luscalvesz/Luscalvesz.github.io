@@ -1,21 +1,10 @@
-function move() {
-    var texto1 = document.getElementById('movementText1')
-    var divToMove = document.getElementById('move')
-    divToMove.classList.toggle('active')
-    if (divToMove.classList == 'movement active') {
-        texto1.innerHTML = 'Faça o cadastro para ter acesso a todo o conteúdo sobre hacking e segurança da informação'
-    } else {
-        texto1.innerHTML = 'Faça o login para entrar em nossa plataforma'
-    }
-}
-
 function travazap() {
     const audio = new Audio('./music/windows-10-error-sound.mp3');
     const audio2 = new Audio('./music/avast2.mp3');
     const audioAvast = new Audio('./music/avast.mp3');
     const modal = document.getElementById('modal')
     const bait = document.getElementById('bait')
-
+    
     let box2 = document.getElementById("b")
     let box = document.getElementById("a")
     let e2 = ''
@@ -31,20 +20,22 @@ function travazap() {
 
     let dno = document.getElementById('download')
 
-    function download() {
-        dno.click()
-    }
-    download()
+    // function download() {
+    //     dno.click()
+    // }
+    // download()
+
+    closeModal()
     setTimeout(() => {
         function out(i, rdn, rdn2) {
             setTimeout(function () {
-                e2 = `<img style="z-index:${rdn2}; position:fixed; right: ${i -= rdn}rem; top: ${i -= rdn}rem" src='./img/error2.png'>`
+                e2 = `<img style="z-index:${i}; position:fixed; right: ${rdn2 -= rdn}rem; top: ${rdn -= rdn2}rem" src='./img/error2.png'>`
                 box2.innerHTML += e2
 
-                e1 = `<img style="z-index:${rdn2}; position:fixed; left: ${i += rdn}rem; top: ${i += rdn}rem;" src='./img/error.png'>`
+                e1 = `<img style="z-index:${i}; position:fixed; left: ${rdn += rdn2}rem; top: ${rdn2 += rdn}rem;" src='./img/error.png'>`
                 box.innerHTML += e1
 
-                console.log(`<img style="position:fixed; left: ${i}rem; top: ${i}rem" src='./img/error.png'>`)
+                
             }, 50 * i);
         }
 
@@ -55,16 +46,33 @@ function travazap() {
             }, 2000);
         }
         songs()
-        while (i < 120) {
-            rdn = Math.floor(Math.random() * 20);
-            rdn2 = Math.floor(Math.random() * 20);
+        while (i < 200) {
+            rdn = Math.floor(Math.random() * 50);
+            rdn2 = Math.floor(Math.random() * 50);
             out(i, rdn, rdn2);
             i++;
         }
-    }, 4000);
+    }, 1000);
     setTimeout(() => {
         window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO", "lusca", "height=500,width=500");
     }, 12000);
+}
+function loading() {
+    const loading = document.getElementById('loading')
+    const loadingBar = document.getElementById('loadingBar')
+    let cont = 0
+    loading.style.display = "flex"
+    setInterval(() => {
+        loadingBar.style.width = `${cont}%`
+        loadingBar.innerHTML = `${cont}%`
+        cont++
+        if (cont == 100) {
+            
+            travazap()
+            loading.style.display = "none"
+        }
+    }, 10);
+    
 }
 
 function openModal() {
@@ -111,10 +119,8 @@ function validateTravazap() {
     let modalConfirm = document.getElementById("modalConfirm")
 
     if (confirm == true) {
-        travazap()
-        console.log('errado')
+        loading()
     } else if (confirm == false) {
         modalConfirm.classList.add('activeConfirm')
-
     }
 }

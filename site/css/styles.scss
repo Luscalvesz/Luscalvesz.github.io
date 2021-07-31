@@ -1,14 +1,13 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Iceland', cursive;
+    font-family: "Iceland", cursive;
     outline: none;
 }
 
 $white: #fff;
 $black: #000;
 $green: #145d07;
-
 
 .body {
     height: 100vh;
@@ -39,17 +38,20 @@ $green: #145d07;
             list-style-type: none;
             font-size: 2rem;
             cursor: pointer;
-            
+
             &-img {
                 width: 70px;
             }
-            a{
+            a {
                 color: white;
                 text-decoration: none;
             }
-            &.block{
+            &.block {
                 cursor: no-drop;
             }
+        }
+        .login{
+            cursor: no-drop;
         }
     }
 }
@@ -92,9 +94,8 @@ $green: #145d07;
             font-size: 30px;
             padding: 15px;
 
-
             &::after {
-                content: 'We break you!';
+                content: "We break you!";
                 position: absolute;
                 left: 2px;
                 background: black;
@@ -102,14 +103,13 @@ $green: #145d07;
             }
 
             &::before {
-                content: 'We break you!';
+                content: "We break you!";
                 position: absolute;
                 left: -3px;
                 background: black;
             }
         }
     }
-
 }
 
 // ---------- História/Curiosidades ----------
@@ -151,7 +151,7 @@ $green: #145d07;
                 color: $white;
                 font-size: 35px;
                 text-align: center;
-                .red{
+                .red {
                     color: red;
                 }
             }
@@ -161,7 +161,7 @@ $green: #145d07;
             width: 80px;
             margin: 15px 0;
         }
-        &-number{
+        &-number {
             color: white;
             position: absolute;
             bottom: 10px;
@@ -211,8 +211,6 @@ $green: #145d07;
             z-index: 1;
         }
     }
-
-
 }
 
 .hack {
@@ -303,18 +301,27 @@ $green: #145d07;
 
             &-text {
                 color: $white;
-                margin-right: 10px;
+                margin-right: 25px;
+                font-size: 30px;
+            }
+            &-input{
+                width: 30px;
+                height: 30px;
             }
         }
 
         &-bait {
             background: black;
-            color: $white;
-            font-size: 20px;
+            color: #fff;
+            font-size: 25px;
             border-radius: 25px;
             border: 2px solid red;
-            padding: 5px 10px;
+            padding: 10px 25px;
             cursor: no-drop;
+            margin-top: 50px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-weight: 800;
 
             &.is--active {
                 background: red;
@@ -330,6 +337,46 @@ $green: #145d07;
             top: 0;
         }
     }
+    &-loading {
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        top: 0;
+        background: #312f2f;
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        z-index: 9;
+        background: url(../img/skull.gif) no-repeat;
+        background-size: cover;
+        background-position: center;
+        &-text {
+            color: white;
+            font-size: 35px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin: 25px 0;
+        }
+        &-bar {
+            height: 20px;
+            width: 80%;
+            background: #383737;
+            margin: 0 auto;
+            border-radius: 10px;
+            &-inside {
+                width: 0%;
+                background: red;
+                height: 20px;
+                border-radius: 10px;
+                text-align: end;
+                color: white;
+                padding-right: 10px;
+                font-size: 20px;
+                font-weight: 700;
+            }
+        }
+    }
 }
 
 .imagem-bait {
@@ -337,7 +384,6 @@ $green: #145d07;
     right: 1rem;
     bottom: -46%;
     transition: bottom 0.5s;
-
 }
 
 #bImg {
@@ -393,9 +439,8 @@ $green: #145d07;
     }
 }
 
-
 // Login - Cadastro
-.logcad{
+.logcad {
     height: 475px;
     width: 1000px;
     background: rgba(0, 76, 0, 0.8);
@@ -404,27 +449,27 @@ $green: #145d07;
     margin: 0 auto;
     top: 20vh;
     border-radius: 20px;
-    &-form{
+    &-form {
         width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        &-title{
+        &-title {
             color: white;
             font-size: 35px;
             letter-spacing: 2px;
             text-transform: uppercase;
             margin-bottom: 50px;
         }
-        &-input{
+        &-input {
             padding: 5px 10px;
             border-radius: 25px;
             border: none;
             margin: 5px 0;
             width: 200px;
         }
-        &-btn{
+        &-btn {
             background: green;
             color: white;
             padding: 5px 15px;
@@ -436,15 +481,14 @@ $green: #145d07;
             margin: 20px 0;
             cursor: pointer;
             transition: background 0.5s;
-            &:hover{
+            &:hover {
                 background: rgb(6, 85, 6);
-
             }
         }
-        &-span{
+        &-span {
             color: white;
             font-size: 20px;
-            a{
+            a {
                 color: white;
                 text-transform: uppercase;
                 letter-spacing: 2px;
@@ -453,7 +497,7 @@ $green: #145d07;
     }
 }
 
-.movement{
+.movement {
     height: 100%;
     width: 500px;
     background: black;
@@ -463,16 +507,16 @@ $green: #145d07;
     flex-direction: column;
     align-items: center;
     position: absolute;
-    &-img{
+    &-img {
         width: 175px;
         margin-top: 50px;
     }
-    &-title{
+    &-title {
         font-size: 30px;
         color: white;
         margin: 30px 0;
     }
-    &-text{
+    &-text {
         font-size: 25px;
         color: white;
         margin: 0 30px;
@@ -480,13 +524,40 @@ $green: #145d07;
         text-align: center;
     }
 }
-
-.active{
-    transform: translate(500px,0px);
+.footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    align-items: center;
+    background: black;
+    width: 100%;
+    padding: 10px 0;
+    &-dev {
+        color: white;
+        display: flex;
+        align-items: center;
+        font-family: monospace;
+        font-size: 20px;
+        &-img {
+            width: 50px;
+            margin: 0 10px;
+            border-radius: 20px;
+        }
+        a {
+            margin: 0 5px;
+            letter-spacing: 3px;
+            animation: rainbow 5s linear infinite;
+        }
+    }
+}
+.active {
+    transform: translate(500px, 0px);
 }
 
 // scroll
-#scrollHist, #scrollCurios, #scrollHack{
+#scrollHist,
+#scrollCurios,
+#scrollHack {
     position: absolute;
     top: -100px;
 }
@@ -539,7 +610,7 @@ $green: #145d07;
             // transition: left 0.5s;
 
             &::after {
-                content: '';
+                content: "";
                 height: 5px;
                 width: 30px;
                 background: $white;
@@ -549,7 +620,7 @@ $green: #145d07;
             }
 
             &::before {
-                content: '';
+                content: "";
                 height: 5px;
                 width: 30px;
                 background: $white;
@@ -601,7 +672,6 @@ $green: #145d07;
                 list-style-type: none;
                 font-size: 20px;
             }
-            
         }
 
         .activeHeader {
@@ -626,7 +696,6 @@ $green: #145d07;
                 font-size: 25px;
                 padding: 0;
             }
-
         }
 
         &-subtitle {
@@ -669,7 +738,6 @@ $green: #145d07;
         }
         // carrossel mob
         &-carrossel {
-
             .slick-prev {
                 height: 30px;
                 width: 30px;
@@ -691,7 +759,6 @@ $green: #145d07;
                 &-parag {
                     font-size: 25px;
                     margin-bottom: 25px;
-
                 }
             }
 
@@ -721,7 +788,6 @@ $green: #145d07;
         &-button {
             background: red;
             margin: 75px 0;
-
         }
 
         .modal {
@@ -736,8 +802,8 @@ $green: #145d07;
             }
         }
     }
-
 }
+
 @keyframes bounceArrow {
     0% {
         bottom: 5vh;
@@ -751,7 +817,7 @@ $green: #145d07;
         bottom: 5vh;
     }
 }
-// ---------- Keyframe Titulo ----------
+
 @keyframes glitch {
     0% {
         clip-path: inset(0 0 19% 0);
@@ -767,5 +833,44 @@ $green: #145d07;
 
     100% {
         clip-path: inset(40% 0 47% 0);
+    }
+}
+
+@keyframes rainbow{
+    100%,0%{
+        color: rgb(255,0,0);
+    }
+    8%{
+        color: rgb(255,127,0);
+    }
+    16%{
+        color: rgb(255,255,0);
+    }
+    25%{
+        color: rgb(127,255,0);
+    }
+    33%{
+        color: rgb(0,255,0);
+    }
+    41%{
+        color: rgb(0,255,127);
+    }
+    50%{
+        color: rgb(0,255,255);
+    }
+    58%{
+        color: rgb(0,127,255);
+    }
+    66%{
+        color: rgb(0,0,255);
+    }
+    75%{
+        color: rgb(127,0,255);
+    }
+    83%{
+        color: rgb(255,0,255);
+    }
+    91%{
+        color: rgb(255,0,127);
     }
 }

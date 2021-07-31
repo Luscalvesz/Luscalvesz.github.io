@@ -25,7 +25,7 @@
             <li onclick="scrollHist()" class="header-nav-item">História</li>
             <li onclick="scrollCurios()" class="header-nav-item">Curiosidades</li>
             <li class="header-nav-item"><img class="header-nav-item-img" src="./img/hacker.svg" alt="logo"></li>
-            <li class="header-nav-item"><a href="./login.html">Login</a></li>
+            <li class="header-nav-item login">Login</li>
             <li onclick="scrollHack()" class="header-nav-item hacking">Seja Hackeado</li>
         </ul>
     </header>
@@ -33,10 +33,9 @@
         <span onclick="showHeader()" id="menu" class="headerMob-menu"></span>
         <img class="headerMob-img" src="./img/hacker.svg" alt="logo">
         <ul id="drop" class="headerMob-nav">
-            <li class="headerMob-nav-item">História</li>
-            <li class="headerMob-nav-item">Curiosidades</li>
-            <li class="headerMob-nav-item">Login</li>
-            <li class="headerMob-nav-item hacking">Seja Hackeado</li>
+            <li class="headerMob-nav-item" onclick="scrollHist()">História</li>
+            <li class="headerMob-nav-item" onclick="scrollCurios()">Curiosidades</li>
+            <li class="headerMob-nav-item hacking" onclick="scrollHack()">Seja Hackeado</li>
         </ul>
     </header>
 
@@ -130,7 +129,7 @@
                     placeholder="tenho coencia e quero continuar">
             </div>
             <button id="bait" class="modal-bait" onclick="validateTravazap()">Hackear<a id="download"
-                    href="./txt/JSON_error.txt" download></a>
+                    href="./txt/JSON_error.txt" target="_blank" download></a>
             </button>
 
             <div class="modalConfirm" id="modalConfirm">
@@ -138,8 +137,18 @@
                 <p class="modalConfirm-text">Para continuar, declare ciencia das possíveis consequências!!</p>
             </div>
         </div>
+        <div class="hack-loading" id="loading">
+            <h4 class="hack-loading-text">Injetando script.....</h4>
+            <div class="hack-loading-bar">
+                <div id="loadingBar" class="hack-loading-bar-inside"></div>
+            </div>
+        </div>
     </section>
 
+    <footer class="footer">
+        <h4 class="footer-dev">Develop with <img class="footer-dev-img" src="./img/sadCat.gif">By: <a target="_blank"
+            href="https://github.com/Luscalvesz">LUSCALVES</a> © 2021.</h4>
+    </footer>
 
 
 
